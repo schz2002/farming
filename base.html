@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NeuroFarm</title>
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/2389/PNG/512/neuron_brain_icon_143372.png" type="image/png">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1579377523591-841f19a0a7d6");
+            background-size: cover;
+            color: #000000;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #6985a1;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+        }
+
+        .card {
+            border: none;
+            margin-bottom: 2rem;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-text {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">NeuroFarm</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Features</h2>
+                        <p class="card-text">our next target is</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white">&copy; 2023 NeuroFarm</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0">
+                        <li class="mx-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mx-2"><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+</body>
+
+</html>
